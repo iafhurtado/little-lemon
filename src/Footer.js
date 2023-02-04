@@ -1,4 +1,5 @@
 import React from "react";
+import { ChakraProvider } from '@chakra-ui/react'
 
 const Footer = () => {
   return (
@@ -39,6 +40,7 @@ const Footer = () => {
             <li>Email</li>
         </ul>
         </div>
+        
       </footer>
     </div>
   );
