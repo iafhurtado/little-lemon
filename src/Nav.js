@@ -1,9 +1,9 @@
-import Logo from "../icons_assets/Logo.svg";
+import Logo from "./icons_assets/Logo.svg";
 
 function Nav() {
     return (
-        <>
-            <img href="Logo" alt="logo"></img>
+        <nav>
+            <img src={Logo} alt="logo" />
             <ul>
                 <li><a href="./home" alt="home">Home</a></li>
                 <li><a href="./about" alt="about">About</a></li>
@@ -12,7 +12,7 @@ function Nav() {
                 <li><a href="./Orderonline" alt="orderonline">Order Online</a></li>
                 <li><a href="./Login" alt="login">Login</a></li>
             </ul>
-        </>
+        </nav>
     );
 }
 
