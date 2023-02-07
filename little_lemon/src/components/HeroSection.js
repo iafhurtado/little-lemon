@@ -8,6 +8,9 @@ const HeroSection = () => {
     <Box
       backgroundColor="rgb(73,94,87)"
       zIndex={-1}
+      justifyContent="center"
+      alignContent="center"
+      paddingLeft="1rem"
     >
       <HStack
         id="Home-section"
@@ -21,7 +24,6 @@ const HeroSection = () => {
         pt={{base:3,md:5,lg:20}}
         pb={5}
         flexDirection={{base:"column", md:"row", lg:"row"}}
-        justifyContent="space-between"
       >
         <Features
           title='Little Lemon'
@@ -39,6 +41,7 @@ const HeroSection = () => {
             borderRadius={20}
             src={LL_homepage}
             alt="homepage"
+            justifyContent="center"
           />
       </HStack>
     </Box>

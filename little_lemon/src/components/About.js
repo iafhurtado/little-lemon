@@ -1,18 +1,18 @@
 import React from 'react';
-import LL_AboutUs from "./images/LL_AboutUs.jpeg";
+import LL_AboutUs from "./images/Mario and Adrian b.jpg";
 import { Text, Heading, Box, HStack, VStack, Image } from "@chakra-ui/react";
 
 const About = () => {
   return (
     <Box
-      backgroundColor="rgb(51,51,51)"
+      backgroundColor="rgb(73,94,87)"
     >
         <VStack
             pt={5} pb={5}
             justifyContent="center"
         >
             <Heading as="h1" id="About-section" fontSize={{base: "25px", md: "30px", lg:"36px"}} color="white">
-                About Us
+                About Us!
             </Heading>
             <HStack
                 display="flex"

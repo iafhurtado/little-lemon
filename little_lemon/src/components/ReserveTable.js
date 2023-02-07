@@ -19,10 +19,12 @@ import axios from "axios";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const ReserveTable = (onSubmit) => {
+const ReserveTable = ({onSubmit, startDate, setStartDate}) => {
   const {isLoading, response, submit} = useSubmit();
   const { onOpen } = useAlertContext();
-
+  console.log(startDate);
+  console.log(setStartDate);
+  console.log(onSubmit);
   const formik = useFormik({
     initialValues: {
       Name: "",
@@ -58,7 +60,7 @@ const ReserveTable = (onSubmit) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [response]);
 
-  const [startDate, setStartDate] = useState(new Date());
+
   const sleep = ms => new Promise(r => setTimeout(r, ms))
   const handleSubmit = async values => {
     await sleep(500)
@@ -66,14 +68,14 @@ const ReserveTable = (onSubmit) => {
   }
 
   return (
-    <Box backgroundColor="rgb(238,153,114)"
+    <Box backgroundColor="rgb(73,94,87)"
           justifyContent="center"
           alignItems="flex-start"
           display="flex"
           onSubmit={handleSubmit}
     >
       <VStack w="1024px" p={10} zIndex={0}>
-        <Heading as="h1" id="Reservation-section" fontSize={{base: "25px", md: "30px", lg:"36px"}} pb={4}>
+        <Heading as="h1" id="Reservation-section" fontSize={{base: "25px", md: "30px", lg:"36px"}} pb={4} color="rgb(244,206,20)" >
           Reserve a Table
         </Heading>
         <Box p={4} rounded="xl" width={{base: "100%", md: "50%", lg:"50%"}} backgroundColor="azure">
